@@ -58,6 +58,10 @@ run `. ansible/bin/activate`. Prompt should indicate that you have active virtua
 
 ## Test Ansible
 
+Navigate to `/datanode/ansible` directory. Prepare vault file, even if will not be used now.
+
+`echo testpassword > vault_file`
+
 Execute `ansible --version` to confirm installation.
 
 Now it is time to test if ansible is able to connect to `ansiblenode`. Simply execute this ad-hoc command:

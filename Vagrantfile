@@ -13,6 +13,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "ansiblenode" do |ansiblenode|
         ansiblenode.vm.box = "ubuntu/bionic64"
         ansiblenode.vm.hostname = "ansiblenode"
+        ansiblenode.vm.network "forwarded_port", guest: 80, host: 8080
         ansiblenode.vm.network "forwarded_port", guest: 22, host: 10189
         ansiblenode.vm.network "private_network", ip: "10.100.198.189"
         ansiblenode.vm.provider "virtualbox" do |v|
